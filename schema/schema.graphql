@@ -1,0 +1,30 @@
+type Author {
+  id: Int!
+  firstName: String
+  lastName: String
+  posts: [Post]
+}
+
+type Post {
+  id: Int!
+  title: String
+  author: Author
+  votes: Int
+}
+
+type Query {
+  post(id: Int!): Post
+  posts: [Post]
+  author(id: Int!): Author
+}
+
+type Mutation {
+  upvotePost (
+    postId: Int!
+  ): Post
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
