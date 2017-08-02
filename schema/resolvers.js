@@ -1,26 +1,56 @@
-const { find, filter } = require('lodash')
-const { posts, authors } = require('./data')
+import { Author, Post } from './models'
 
-module.exports = {
+const resolvers = {
   Query: {
-    post: (_, { id }) => find(posts, { id: id }),
-    posts: () => posts,
-    author: (_, { id }) => find(authors, { id: id })
+    author: async (_, { id }) => {
+      return await Author.get(id).run()
+    },
+    authors: async () => {
+      return await Author.run()
+    },
+    post: async (_, { id }) => {
+      return await Post.get(id).run()
+    },
+    posts: async () => {
+      return await Post.run()
+    }
   },
   Mutation: {
-    upvotePost: (_, { postId }) => {
-      const post = find(posts, { id: postId })
-      if (!post) {
-        throw new Error(`Couldn't find post with id ${postId}`)
-      }
-      post.votes += 1
-      return post
+    createAuthor: async (_, data) => {
+      return await Author.save(Object.assign({}, data))
+    },
+    createPost: async (_, data) => {
+      return await Post.save(Object.assign({}, data))
+    },
+    updateAuthor: async (_, data) => {
+      return await Author.get(data.id).update(Object.assign({}, data)).run()
+    },
+    updatePost: async (_, data) => {
+      return await Post.get(data.id).update(Object.assign({}, data)).run()
+    },
+    deletePost: async (_, { id }) => {
+      return await Post.get(id).then(post => {
+        if (post) {
+          return post.delete()
+        }
+      })
     }
   },
   Author: {
-    posts: author => filter(posts, { authorId: author.id })
+    posts: async author => {
+      return await Post.filter({ authorId: author.id }).run()
+    }
   },
   Post: {
-    author: post => find(authors, { id: post.authorId })
+    author: async post => {
+      return await Author.get(post.authorId).run()
+    }
   }
+  // Subscription: {
+  //   somethingChanged: {
+  //     subscribe: () => pubsub.asyncIterator(SOMETHING_CHANGED_TOPIC)
+  //   }
+  // }
 }
+
+export default resolvers

@@ -1,9 +1,6 @@
-const fs = require('fs')
-const { makeExecutableSchema } = require('graphql-tools')
-const resolvers = require('./resolvers')
-const schema = fs.readFileSync('./schema/schema.graphql', 'utf8')
+import { readFileSync } from 'fs'
+import { makeExecutableSchema } from 'graphql-tools'
+import resolvers from './resolvers'
+const schema = readFileSync('./schema/schema.graphql', 'utf-8')
 
-module.exports = makeExecutableSchema({
-  typeDefs: schema,
-  resolvers
-})
+export default makeExecutableSchema({ typeDefs: schema, resolvers })
