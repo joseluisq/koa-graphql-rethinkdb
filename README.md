@@ -22,7 +22,7 @@ Start GraphQL Server
 yarn start
 ```
 
-Enter to [GraphiQL])(https://github.com/graphql/graphiql) app at http://localhost:4020/graphiql
+Enter to [GraphiQL](https://github.com/graphql/graphiql) app at http://localhost:4020/graphiql
 
 ## API
 
