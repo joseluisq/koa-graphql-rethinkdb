@@ -46,11 +46,6 @@ const resolvers = {
       return await Author.get(post.authorId).run()
     }
   }
-  // Subscription: {
-  //   somethingChanged: {
-  //     subscribe: () => pubsub.asyncIterator(SOMETHING_CHANGED_TOPIC)
-  //   }
-  // }
 }
 
 export default resolvers
