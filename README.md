@@ -1,6 +1,9 @@
 # Koa-GraphQL-RethinkDB
 
-> [GraphQL](https://github.com/graphql/graphql-js) Server API example using [Koa](https://github.com/koajs/koa), [Apollo GraphQL Server](https://github.com/apollographql/apollo-server) & [RethinkDB](https://github.com/rethinkdb/rethinkdb)
+> [GraphQL](https://github.com/graphql/graphql-js) API Server example using [Koa](https://github.com/koajs/koa), [Apollo GraphQL Server](https://github.com/apollographql/apollo-server) & [RethinkDB](https://github.com/rethinkdb/rethinkdb). :rocket:
+
+
+_**Note:** Check out the [Vue 2 + Typescript](https://github.com/joseluisq/vue-typescript-starter) client example._
 
 ## Usage
 
