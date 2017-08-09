@@ -32,10 +32,6 @@ type Mutation {
   deleteAuthor(id: String!): Author
 }
 
-type Subscription {
-  postAddred: Post
-}
-
 schema {
   query: Query
   mutation: Mutation

@@ -11,8 +11,8 @@ export function createModel (name, fields, ...args) {
   const model = thinky.createModel(
     name,
     {
-      createdAt: thinky.type.date().default(thinky.r.now()),
       id: thinky.type.string().min(2),
+      createdAt: thinky.type.date().default(thinky.r.now()),
       updatedAt: thinky.type.date(),
       ...fields
     },
