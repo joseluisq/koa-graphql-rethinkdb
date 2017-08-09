@@ -1,4 +1,4 @@
-import thinky from './connector'
+import thinky from '../connector'
 import { isNull } from 'lodash'
 
 const models = {}
@@ -13,13 +13,19 @@ export function createModel (name, fields, ...args) {
     {
       createdAt: thinky.type.date().default(thinky.r.now()),
       id: thinky.type.string().min(2),
+      updatedAt: thinky.type.date(),
       ...fields
     },
     ...args
   )
 
   models[name] = model
+
   model.defineStatic('exist', exist)
+  model.defineStatic('updateAt', function (fields = {}) {
+    fields.updatedAt = thinky.r.now()
+    return this.update(fields)
+  })
 
   return model
 }
@@ -31,17 +37,3 @@ async function exist (offset) {
     return false
   }
 }
-
-export const Post = createModel('Post', {
-  title: thinky.type.string(),
-  votes: thinky.type.number(),
-  authorId: thinky.type.string()
-})
-
-export const Author = createModel('Author', {
-  firstName: thinky.type.string(),
-  lastName: thinky.type.string()
-})
-
-Post.hasOne(Author, 'author', 'id', 'authorId')
-Author.hasMany(Post, 'posts', 'id', 'authorId')

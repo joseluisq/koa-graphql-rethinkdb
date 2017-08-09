@@ -4,6 +4,7 @@ type Author {
   lastName: String
   posts: [Post]
   createdAt: String
+  updatedAt: String
 }
 
 type Post {
@@ -12,6 +13,7 @@ type Post {
   author: Author
   votes: Int
   createdAt: String
+  updatedAt: String
 }
 
 type Query {
@@ -27,6 +29,7 @@ type Mutation {
   createPost(title: String!, votes: Int!, authorId: String!): Post
   updatePost(id: String!, title: String, votes: Int, authorId: String): Post
   deletePost(id: String!): Post
+  deleteAuthor(id: String!): Author
 }
 
 type Subscription {
@@ -36,5 +39,4 @@ type Subscription {
 schema {
   query: Query
   mutation: Mutation
-  # subscription: Subscription
 }
