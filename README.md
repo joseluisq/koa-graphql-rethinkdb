@@ -19,7 +19,7 @@ Run RethinkDB Server
 rethinkdb
 ```
 
-Start GraphQL Server
+Start GraphQL API Server
 
 ```sh
 yarn start
@@ -29,7 +29,7 @@ Enter to [GraphiQL](https://github.com/graphql/graphiql) app at http://localhost
 
 ## API
 
-Check out the [GraphQL Schema](./schema/schema.graphql).
+Check out the [GraphQL Schema](./src/graphql/schema.graphql).
 
 ## Contributions
 
