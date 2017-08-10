@@ -1,7 +1,7 @@
-import Koa from 'koa'
-import KoaRouter from 'koa-router'
-import KoaBody from 'koa-bodyparser'
-import cors from 'kcors'
+import * as Koa from 'koa'
+import * as KoaRouter from 'koa-router'
+import * as KoaBody from 'koa-bodyparser'
+import * as cors from 'kcors'
 import { graphqlKoa, graphiqlKoa } from 'apollo-server-koa'
 import schema from './graphql'
 

@@ -1,0 +1,22 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "bin",
+    "sourceMap": true,
+    "target": "es6",
+    "lib": ["es2017"],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/types/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
