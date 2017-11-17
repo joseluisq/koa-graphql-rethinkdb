@@ -55,7 +55,7 @@ __2. createPost:__
 
 ```graphql
 mutation {
-  createPost(title: "Queries and Mutations", authorId: "b61b0fa9-9cb3-41d7-beaa-452df0853335", votes: 1)
+  createPost(title: "Queries and Mutations", authorId: "THE_AUTHOR_ID_HERE", votes: 1)
 }
 ```
 
