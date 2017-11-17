@@ -2,8 +2,10 @@
 
 > [GraphQL](https://github.com/graphql/graphql-js) API Server example using [Koa](https://github.com/koajs/koa), [Apollo GraphQL Server](https://github.com/apollographql/apollo-server) & [RethinkDB](https://github.com/rethinkdb/rethinkdb). :rocket:
 
-_**Note:** Koa requires node v7.6.0 or higher_
-_**Note:** Check out the [Vue 2 + Typescript](https://github.com/joseluisq/vue-typescript-starter) client example._
+**Notes:**
+
+- Koa requires NodeJS v7.6.0 or higher.
+- Check out the [Vue 2 + Typescript](https://github.com/joseluisq/vue-typescript-starter) client example.
 
 ## Usage
 
