@@ -5,27 +5,35 @@
 **Notes:**
 
 - Koa requires NodeJS v7.6.0 or higher.
-- Check out the [Vue 2 + Typescript](https://github.com/joseluisq/vue-typescript-starter) client example.
 
 ## Usage
 
-Install dependencies
+1. Install dependencies via Yarn:
 
 ```sh
 yarn
 ```
 
-Run RethinkDB Server
+or using npm:
+
+```sh
+npm install
+```
+
+
+2. Run RethinkDB Server
 
 ```sh
 rethinkdb
 ```
 
-Start GraphQL API Server
+3. Start GraphQL API Server
 
 ```sh
 yarn start
 ```
+
+__Optional:__ Then the server is running you could run the [Vue 2 + Typescript](https://github.com/joseluisq/vue-typescript-starter) client example to consuming this GraphQL API.
 
 ## GraphiQL
 
