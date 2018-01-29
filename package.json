@@ -1,6 +1,7 @@
 {
   "name": "koa-graphql-rethinkdb",
   "version": "0.0.0",
+  "private": true,
   "main": "index.js",
   "author": "José Luis Quintana <https://git.io>",
   "license": "MIT",
@@ -30,11 +31,5 @@
     "watch": "node node_modules/typescript/lib/tsc.js --watch",
     "clean": "node bin/clean.js",
     "lint": "node node_modules/tslint/bin/tslint --format stylish --project tsconfig.json --type-check"
-  },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-2"
-    ]
   }
 }
