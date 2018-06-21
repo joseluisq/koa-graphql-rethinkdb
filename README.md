@@ -4,7 +4,7 @@
 
 **Notes:**
 
-- Koa requires NodeJS v7.6.0 or higher.
+- `Koa` requires NodeJS v7.6.0 or higher.
 
 ## Usage
 
@@ -19,7 +19,6 @@ or using npm:
 ```sh
 npm install
 ```
-
 
 2. Run RethinkDB Server
 

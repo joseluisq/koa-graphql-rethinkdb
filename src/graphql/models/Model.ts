@@ -2,11 +2,11 @@ import Thinky from '../connector'
 
 const models: any = {}
 
-export function getModel(name: string): string {
+export function getModel (name: string): string {
   return models[name]
 }
 
-export function createModel(
+export function createModel (
   name: string,
   fields: object = {},
   ...args: any[]
@@ -24,7 +24,7 @@ export function createModel(
 
   models[name] = model
 
-  model.defineStatic('updateAt', function(this: any, fields: any = {}): any {
+  model.defineStatic('updateAt', function (this: any, fields: any = {}): any {
     fields.updatedAt = Thinky.r.now()
     return this.update(fields)
   })

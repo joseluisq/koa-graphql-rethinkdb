@@ -2,3 +2,5 @@ node_modules
 rethinkdb_data
 dist
 bin
+*.log
+*cache
